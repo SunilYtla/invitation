@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element: <Events />,
   },
   {
-    path: "/invitation",
+    path: "/",
     element: <HeroSection />,
   },
   {
