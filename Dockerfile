@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the application
-RUN vite build --base=/
+RUN npm run build
 
 # The `dist` folder will be created at this point
 
