@@ -69,7 +69,7 @@
 }
 /* Paisley Pattern using local SVG */
 .paisley-bg {
-  background-image: url("src/assets/paisley.svg");
+  background-image: url("/src/assets/paisley.svg");
   background-size: 200px; /* Adjust size for pattern */
   background-repeat: repeat;
   opacity: 0.5; /* Adjust for subtle effect */
