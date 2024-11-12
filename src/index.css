@@ -54,12 +54,12 @@
     border-color: #ffd700;
   }
   .animate-fade-in {
-    animation: fade-in 2s ease-in forwards;
+    animation: fade-in 1.5s ease-in forwards;
   }
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: scale(0.95);
+      transform: scale(0.9);
     }
     to {
       opacity: 1;
@@ -72,5 +72,5 @@
   background-image: url("/src/assets/paisley.svg");
   background-size: 200px; /* Adjust size for pattern */
   background-repeat: repeat;
-  opacity: 0.5; /* Adjust for subtle effect */
+  opacity: 0.75; /* Adjust for subtle effect */
 }
