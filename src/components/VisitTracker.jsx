@@ -7,7 +7,7 @@ const VisitTracker = () => {
   // This function calls the Rust API
   const recordVisit = async () => {
     try {
-      const response = await fetch(`http://api.modern-invites.in/visit/`, {
+      const response = await fetch(`https://api.modern-invites.in/visit/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
