@@ -70,7 +70,7 @@ function Events() {
   }, []);
 
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-start bg-black bg-opacity-80 p-10 overflow-auto space-y-12 ">
+    <div className="absolute inset-0 flex flex-col items-center justify-start bg-black  p-10 overflow-auto space-y-12 ">
       <h1 className="text-6xl font-extrabold text-gold mb-10">
         Wedding Events
       </h1>
