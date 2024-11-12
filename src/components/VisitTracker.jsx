@@ -7,12 +7,14 @@ const VisitTracker = () => {
   // This function calls the Rust API
   const recordVisit = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8080/visit/`, {
+      const response = await fetch(`http://api.modern-invites.in/visit/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
       });
+
+      console.log("response", response);
 
       if (!response.ok) {
         console.error("Network response was not ok:", response.status);
@@ -63,7 +65,7 @@ const VisitTracker = () => {
   return (
     <div className="flex flex-col items-center  text-white font-bold rounded s p-4">
       <span className="text-4xl">{animatedCount}</span>
-      <span className="text-lg">Visitors Count</span>
+      <span className="text-lg">💖 Hearts Touched</span>
     </div>
   );
 };
