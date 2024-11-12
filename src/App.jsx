@@ -37,7 +37,7 @@ function App() {
           className="hover:text-pink-500 transition duration-300"
         >
           <span className="ml-2 text-xs"></span>
-          <FontAwesomeIcon size="xl" icon={faInstagram} />
+          <FontAwesomeIcon size="3x" icon={faInstagram} />
         </a>
         {/* Signature */}
         <span className="ml-2 text-xs"></span>
