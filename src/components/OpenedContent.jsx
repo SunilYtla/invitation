@@ -37,7 +37,7 @@ const OpenedContent = ({ timeLeft, navigate }) => (
         Greetings
       </button>
     </div>
-    {/* <VisitTracker /> */}
+    <VisitTracker />
   </div>
 );
 
