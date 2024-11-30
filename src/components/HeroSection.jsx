@@ -6,7 +6,7 @@ import OpenedContent from "./OpenedContent";
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  const weddingDate = new Date("2024-12-26T10:00:00").getTime();
+  const engagementDate = new Date("2024-12-06T10:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -18,7 +18,7 @@ const HeroSection = () => {
   useEffect(() => {
     const updateCountdown = () => {
       const now = new Date().getTime();
-      const distance = weddingDate - now;
+      const distance = engagementDate - now;
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -32,7 +32,7 @@ const HeroSection = () => {
     };
     const timerId = setInterval(updateCountdown, 1000);
     return () => clearInterval(timerId);
-  }, [weddingDate]);
+  }, [engagementDate]);
 
   const handleOpen = () => setIsOpen(true);
 

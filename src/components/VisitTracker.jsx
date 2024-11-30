@@ -22,7 +22,8 @@ const VisitTracker = () => {
       }
 
       const data = await response.json();
-      setVisitorCount(data.count); // Update with the correct property from API response
+      console.log("Fetched data:", data); // Debugging
+      setVisitorCount(data); // Update with the correct property from API response
       //   setVisitorCount(1000); // Update with the correct property from API response
     } catch (error) {
       console.error("Error recording visit:", error);
@@ -64,7 +65,10 @@ const VisitTracker = () => {
 
   return (
     <div className="flex flex-col items-center  text-white font-bold rounded s p-4">
-      <span className="text-4xl">{animatedCount}</span>
+      <div>
+        <span className="text-4xl">{animatedCount}</span>
+        <span className="text">times</span>
+      </div>
       <span className="text-lg">💖 Hearts Touched</span>
     </div>
   );

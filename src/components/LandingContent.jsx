@@ -19,7 +19,7 @@ const LandingContent = ({ handleOpen }) => (
     <div className="flex flex-col items-center space-y-2">
       <a
         onClick={() =>
-          window.open("https://maps.app.goo.gl/ULcUH2bQ7L1gR2GV9", "_blank")
+          window.open("https://maps.app.goo.gl/13vSFC7iCeyP1x616", "_blank")
         }
         href="#"
         className="text-gold "

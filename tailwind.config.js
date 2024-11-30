@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         header: ['"Great Vibes"', "cursive"],
+        weddingvibe: ["Satisfy", "cursive"],
       },
     },
   },
