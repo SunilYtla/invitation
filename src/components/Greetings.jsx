@@ -25,6 +25,16 @@ const names = [
 
 const Greetings = () => {
   return (
+    <div className="fixed inset-0 flex flex-col items-center justify-center h-screen bg-gradient-to-r from-yellow-300 ">
+      <h1 className="text-6xl md:text-8xl font-extrabold text-yellow-900 tracking-wide mb-4">
+        COMING SOON
+      </h1>
+      <p className="text-2xl md:text-3xl text-yellow-800">
+        Stay tuned for something amazing!
+      </p>
+    </div>
+  );
+  return (
     <div className="fixed inset-0 bg-gradient-to-r from-yellow-300 via-purple-500 to-indigo-600 flex flex-col items-center text-center">
       <div className="py-8 w-full border-b-8 border-yellow-500">
         <h1
