@@ -5,19 +5,20 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 // Sample event data with image URLs
 const events = [
   {
-    name: "Engagement",
-    date: "2024-12-06T10:00:00",
-    color: "#D1E8E4",
-    image:
-      "https://t4.ftcdn.net/jpg/09/58/98/33/240_F_958983329_RmhS3pisBUxejnI5ZlUXmNL56wXAUbwe.jpg",
-    maps: "https://maps.app.goo.gl/13vSFC7iCeyP1x616",
-  },
-  {
     name: "Marriage",
     date: "2024-12-26T10:00:00",
     color: "#FFB6C1",
     image:
       "https://media.istockphoto.com/id/866987706/photo/indian-wedding-hands.jpg?s=612x612&w=0&k=20&c=6L-u9qhFPv9MjDnF4UK4AqjVbDKM4_8Xad72IHhwPZE=",
+    maps: "https://maps.app.goo.gl/ULcUH2bQ7L1gR2GV9",
+  },
+  {
+    name: "Reception",
+    date: "2024-12-28T13:00:00",
+    color: "#FFFACD",
+    image:
+      "https://media.istockphoto.com/id/1334591706/photo/indian-traditional-food-in-wedding-ceremony.jpg?s=612x612&w=0&k=20&c=Ur0Fnlsl2Y_k-UKFfwW4pGtr4V_G6YTbQrGrGOrZaM4=",
+    maps: "https://maps.app.goo.gl/JKWG9XCQEhKc2WLH8",
   },
   {
     name: "Sangeet",
@@ -33,12 +34,14 @@ const events = [
     image:
       "https://t4.ftcdn.net/jpg/09/60/30/71/240_F_960307195_XEJaGDfBFNtOwYPi9numrdOzIZNgDhvq.jpg",
   },
+
   {
-    name: "Reception",
-    date: "LOADING...",
-    color: "#FFFACD",
+    name: "Engagement",
+    date: "2024-12-06T10:00:00",
+    color: "#D1E8E4",
     image:
-      "https://media.istockphoto.com/id/1334591706/photo/indian-traditional-food-in-wedding-ceremony.jpg?s=612x612&w=0&k=20&c=Ur0Fnlsl2Y_k-UKFfwW4pGtr4V_G6YTbQrGrGOrZaM4=",
+      "https://t4.ftcdn.net/jpg/09/58/98/33/240_F_958983329_RmhS3pisBUxejnI5ZlUXmNL56wXAUbwe.jpg",
+    maps: "https://maps.app.goo.gl/13vSFC7iCeyP1x616",
   },
 ];
 
@@ -84,7 +87,17 @@ function Events() {
         {events.map((event, index) => {
           const time = timeLeft[index];
           const displayDate =
-            event.date.length > 10 ? event.date.slice(0, 10) : event.date;
+            event.date.length > 10
+              ? new Intl.DateTimeFormat("en-IN", {
+                  year: "numeric",
+                  month: "short",
+                  day: "2-digit",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: true,
+                  timeZone: "Asia/Kolkata",
+                }).format(new Date(event.date))
+              : event.date;
 
           return (
             <div
@@ -107,12 +120,7 @@ function Events() {
                   <p className="text-lg text-white">Countdown: ....</p>
                 )}
                 <button
-                  onClick={() =>
-                    window.open(
-                      event.maps || "https://maps.app.goo.gl/ULcUH2bQ7L1gR2GV9",
-                      "_blank"
-                    )
-                  }
+                  onClick={() => window.open(event.maps || "", "_blank")}
                   className="mt-4 px-6 py-3 bg-gold text-indigo-900 font-semibold rounded-full hover:bg-yellow-600 transition duration-300 flex items-center justify-center"
                 >
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
